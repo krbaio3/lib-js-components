@@ -1,0 +1,17 @@
+@use 'sass:color';
+
+@mixin darken-css-var($variable, $amount) {
+  // Utiliza el nombre de la variable CSS sin la referencia a "var"
+  $color: #{$variable};
+
+  // Si $variable es un color, entonces oscurece el color.
+  // De lo contrario, establece el color como la variable CSS.
+  $darkened-color: if(
+      type-of($color) == 'color',
+      color.darken($color, $amount),
+      $color
+  );
+
+  // Aplica el color
+  background-color: $darkened-color;
+}
