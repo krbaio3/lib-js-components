@@ -1,8 +1,8 @@
 import { Component, Prop, h } from '@stencil/core';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
+  tag: 'css-component',
+  styleUrl: 'bitmap.scss',
   shadow: true,
 })
 export class MyComponent {

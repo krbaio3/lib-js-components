@@ -1,5 +1,5 @@
 import './header.css';
-import { createButton } from '../../atoms/button/Button';
+import { createButton } from '../../atoms/custom-button/CustomButton';
 
 export const createHeader = ({ user, onLogout, onLogin, onCreateAccount }) => {
   const header = document.createElement('header');

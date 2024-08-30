@@ -1,15 +1,19 @@
-import './button.scss';
+import { Component, Prop, h } from '@stencil/core';
 
-export const createButton = ({ primary = false, size = 'medium', backgroundColor, label, onClick }) => {
-  const btn = document.createElement('button');
-  btn.type = 'button';
-  btn.innerText = label;
-  btn.addEventListener('click', onClick);
+@Component({
+  tag: 'css-button',
+  styleUrl: 'button.scss',
+  shadow: true,
+})
+export class Button {
+  @Prop() label: string;
+  @Prop() type: string = 'button';
 
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  btn.className = ['storybook-button', `storybook-button--${size}`, mode].join(' ');
-
-  btn.style.backgroundColor = backgroundColor;
-
-  return btn;
-};
+  render() {
+    return (
+      <button type={this.type} class="css-button">
+        {this.label}
+      </button>
+    );
+  }
+}

@@ -62,7 +62,7 @@ Para añadir un nuevo componente a la biblioteca, sigue estos pasos:
 import { defineCustomElements } from '../../../../loader';
 
 export default {
-  title: 'Atoms/MyComponent',
+  title: 'Atoms/Bitmap',
   tags: [ 'autodocs' ],
   argTypes: {
     first: { control: 'text' },

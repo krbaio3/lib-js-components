@@ -1,7 +1,7 @@
 import { defineCustomElements } from '../../../../loader';
 
 export default {
-  title: 'Atoms/MyComponent',
+  title: 'Atoms/Bitmap',
   tags: ['autodocs'],
   argTypes: {
     first: { control: 'text' },
@@ -15,10 +15,10 @@ export default {
   ],
 };
 
-const Template = ({ first, last }) => `<my-component first="${first}" last="${last}"></my-component>`;
+const Template = ({ imgSrc, imgAlt }) => ` <css-bitmap img-src="${imgSrc}" img-alt="${imgAlt}"></css-bitmap>`;
 
 export const Default = Template.bind({});
 Default.args = {
-  first: 'John',
-  last: 'Doe',
+  imgSrc: 'https://via.placeholder.com/150',
+  imgAlt: 'imagen de prueba',
 };
