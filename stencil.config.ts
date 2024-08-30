@@ -4,10 +4,11 @@ import { sass } from '@stencil/sass';
 export const config: Config = {
   namespace: 'lib-js-components',
   plugins: [sass()],
-  globalStyle: 'src/styles/styles.scss',
+  globalStyle: 'src/styles.scss',
   outputTargets: [
     {
       type: 'dist',
+      dir: 'static-files',
       esmLoaderPath: '../loader',
     },
     {

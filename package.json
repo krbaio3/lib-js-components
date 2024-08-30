@@ -2,20 +2,20 @@
   "name": "lib-js-components",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.js",
-  "types": "dist/types/index.d.ts",
-  "collection": "dist/collection/collection-manifest.json",
-  "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/lib-js-components/lib-js-components.esm.js",
+  "main": "static-files/index.cjs.js",
+  "module": "static-files/index.js",
+  "types": "static-files/types/index.d.ts",
+  "collection": "static-files/collection/collection-manifest.json",
+  "collection:main": "static-files/collection/index.js",
+  "unpkg": "static-files/lib-js-components/lib-js-components.esm.js",
   "exports": {
     ".": {
-      "import": "./dist/lib-js-components/lib-js-components.esm.js",
-      "require": "./dist/lib-js-components/lib-js-components.cjs.js"
+      "import": "./static-files/lib-js-components/lib-js-components.esm.js",
+      "require": "./static-files/lib-js-components/lib-js-components.cjs.js"
     },
     "./my-component": {
-      "import": "./dist/components/my-component.js",
-      "types": "./dist/components/my-component.d.ts"
+      "import": "./static-files/components/my-component.js",
+      "types": "./static-files/components/my-component.d.ts"
     },
     "./loader": {
       "import": "./loader/index.js",
@@ -28,7 +28,7 @@
     "url": "https://github.com/ionic-team/stencil-component-starter.git"
   },
   "files": [
-    "dist/",
+    "static-files/",
     "loader/"
   ],
   "scripts": {
@@ -39,7 +39,9 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "docker:build": "docker build -t lib-js-components-local-cdn:0.0.1 .",
+    "docker:run": "docker run -p 5000:80 lib-js-components-local-cdn:0.0.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.6.1",
