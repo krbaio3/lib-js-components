@@ -1,7 +1,7 @@
 import { defineCustomElements } from '../../../../loader';
 
 export default {
-  title: 'Components/Table',
+  title: 'Design System/Organism/Table',
   tags: ['autodocs'],
   argTypes: {
     headers: { control: 'array' },

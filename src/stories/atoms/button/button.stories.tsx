@@ -1,11 +1,10 @@
 import { defineCustomElements } from '../../../../loader';
 
 export default {
-  title: 'Atoms/MyComponent',
+  title: 'Design System/Atoms/Button',
   tags: ['autodocs'],
   argTypes: {
-    first: { control: 'text' },
-    last: { control: 'text' },
+    label: { control: 'text' },
   },
   loaders: [
     async () => {
@@ -15,10 +14,9 @@ export default {
   ],
 };
 
-const Template = ({ first, last }) => `<my-component first="${first}" last="${last}"></my-component>`;
+const Template = ({ label }) => `<css-button label="${label}"></css-button>`;
 
 export const Default = Template.bind({});
 Default.args = {
-  first: 'John',
-  last: 'Doe',
+  label: 'Click me',
 };

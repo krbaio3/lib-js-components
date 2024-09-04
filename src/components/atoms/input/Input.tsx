@@ -9,7 +9,18 @@ export class Input {
   @Prop() type: string = 'text';
   @Prop() value: string;
 
+  componentWillLoad() {
+    console.log('this.type', this.type)
+  }
+
   render() {
-    return <input type={this.type} value={this.value} class="css-input" />;
+    return (
+        <input
+          type={this.type}
+          value={this.value}
+          class="css-input"
+        />
+    );
   }
 }
+

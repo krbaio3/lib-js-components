@@ -25,5 +25,10 @@ Thumbs.db
 UserInterfaceState.xcuserstate
 .env
 
-*storybook.log
-/static-files/
+*storybook.log!/custom-elements.d.ts
+custom-elements.json
+custom-elements.d.ts
+/static-files
+src/components.d.ts
+custom-elements.d.ts
+custom-elements.json
