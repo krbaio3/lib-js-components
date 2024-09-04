@@ -2,23 +2,14 @@
 
 <!-- Auto Generated Below -->
 
-## Description
-
-A checkbox component that accepts a label and checked status as properties.
 
 ## Properties
 
-| Property  | Attribute | Description        | Type      | Default     |
-|-----------|-----------|--------------------|-----------|-------------|
-| `label`   | `label`   | The checkbox label | `string`  | `undefined` |
-| `checked` | `checked` | Checked status     | `boolean` | `false`     |
+| Property  | Attribute | Description | Type      | Default     |
+| --------- | --------- | ----------- | --------- | ----------- |
+| `checked` | `checked` |             | `boolean` | `false`     |
+| `label`   | `label`   |             | `string`  | `undefined` |
 
-## Usage
-
-```html
-
-<css-checkbox label="Check me"></css-checkbox>
-```
 
 ----------------------------------------------
 

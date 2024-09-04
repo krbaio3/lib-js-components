@@ -3,12 +3,18 @@ import { createButton } from '../../../components/atoms/custom-button/CustomButt
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
-  title: 'Atoms/Button',
+  title: 'Design System/Atoms/Custom-Button',
   tags: ['autodocs'],
   render: ({ label, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    return createButton({ label, ...args });
+    return createButton({
+      label,
+      primary: args.primary,
+      size: args.size,
+      backgroundColor: args.backgroundColor || 'blue',
+      onClick: args.onClick || (() => {}),
+    });
   },
   argTypes: {
     backgroundColor: { control: 'color' },

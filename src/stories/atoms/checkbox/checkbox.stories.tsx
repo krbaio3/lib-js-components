@@ -1,7 +1,7 @@
-import { defineCustomElements } from '../../../../loader';
+// import { defineCustomElements } from '../../../../loader';
 
 export default {
-  title: 'Atoms/Checkbox',
+  title: 'Design System/Atoms/Checkbox',
   tags: ['autodocs'],
   argTypes: {
     label: { control: 'text' },
@@ -9,7 +9,7 @@ export default {
   },
   loaders: [
     async () => {
-      await defineCustomElements();
+      // await defineCustomElements();
       return {};
     },
   ],

@@ -1,5 +1,5 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { Input } from './Input';
+import { Input }       from './Input';
 
 describe('css-input', () => {
   it('renders', async () => {

@@ -2,22 +2,14 @@
 
 <!-- Auto Generated Below -->
 
-## Description
-
-A button component that accepts a label as a property.
 
 ## Properties
 
-| Property | Attribute | Description      | Type     | Default     |
-|----------|-----------|------------------|----------|-------------|
-| `label`  | `label`   | The button label | `string` | `undefined` |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `label`  | `label`   |             | `string` | `undefined` |
+| `type`   | `type`    |             | `string` | `'button'`  |
 
-## Usage
-
-```html
-
-<css-button label="Click me"></css-button>
-```
 
 ----------------------------------------------
 

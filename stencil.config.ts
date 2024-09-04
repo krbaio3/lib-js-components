@@ -1,9 +1,33 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
+import autoprefixer from 'autoprefixer';
+import postcss from 'postcss';
+import tailwind from 'stencil-tailwind-plugin';
+import postcssImport from 'postcss-import';
+import postcssPurgeCss from '@fullhuman/postcss-purgecss';
+import tailwindConf from './tailwind.config';
+import cssnanoPlugin from 'cssnano';
+
+const purgeCss = postcssPurgeCss({
+  content: ["./src/**/*.tsx", "./src/**/*.css", "./src/index.html"],
+  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+});
 
 export const config: Config = {
-  namespace: 'lib-js-components',
-  plugins: [sass()],
+  namespace: 'toy-story',
+  plugins: [
+    sass(),
+    tailwind({tailwindConf}),
+    postcss([
+      postcssImport(),
+      autoprefixer(),
+      ...(process.env.NODE_ENV === "production"
+        ? [purgeCss, cssnanoPlugin({ preset: 'default' })]
+        : [])
+    ]),
+  ],
+  cacheDir: '.cache',
+  srcDir: 'src',
   globalStyle: 'src/styles.scss',
   outputTargets: [
     {
@@ -29,6 +53,10 @@ export const config: Config = {
     },
   ],
   testing: {
-    browserHeadless: 'new',
+    browserHeadless: "new",
+  },
+  devServer: {
+    openBrowser: false,
+    reloadStrategy: 'pageReload', // Esto asegurará que la página se recargue cuando haya cambios en los estilos
   },
 };

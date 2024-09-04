@@ -1,6 +1,15 @@
-.css-input {
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 0.25rem;
-  width: 100%;
+@import '../../../styles/atoms/input/index.scss';
+:host{
+
+  .css-input {
+    transition: border-color 0.2s ease-in-out;
+
+    &[type='password'] {
+      font-family: 'Courier New', monospace;
+    }
+    &[type='number'] {
+      text-align: right;
+    }
+  }
+
 }
