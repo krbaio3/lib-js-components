@@ -1,5 +1,8 @@
 /** @type { import('@storybook/html').Preview } */
-// import '../src/styles.scss';
+
+import { defineCustomElements } from '../loader';
+
+defineCustomElements();
 
 const preview: import('@storybook/html').Preview = {
   parameters: {

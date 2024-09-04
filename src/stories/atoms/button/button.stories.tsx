@@ -1,5 +1,3 @@
-import { defineCustomElements } from '../../../../loader';
-
 export default {
   title: 'Design System/Atoms/Button',
   tags: ['autodocs'],
@@ -8,7 +6,6 @@ export default {
   },
   loaders: [
     async () => {
-      await defineCustomElements();
       return {};
     },
   ],

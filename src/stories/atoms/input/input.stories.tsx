@@ -1,4 +1,4 @@
-import { defineCustomElements } from '../../../../loader';
+// import { defineCustomElements } from '../../../../loader';
 import { html }                 from 'lit';
 
 export default {
@@ -17,7 +17,7 @@ export default {
     },
   },
   loaders: [
-    async () => defineCustomElements(),
+    // async () => defineCustomElements(),
   ],
 };
 

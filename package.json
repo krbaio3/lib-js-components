@@ -31,19 +31,22 @@
     "loader/"
   ],
   "scripts": {
-    "build": "stencil build",
+    "build": "stencil build --docs",
     "build-storybook": "storybook build",
     "docker:build": "docker build -t @css/ui-kit-local-cdn:0.0.1 .",
     "docker:run": "docker run -p 5000:80 @css/ui-kit-local-cdn:0.0.1",
     "generate": "stencil generate",
     "lint": "eslint src/**/*{.ts,.tsx}",
-    "start": "stencil build --dev --watch --serve",
+    "start": "stencil build --watch --serve --docs",
     "storybook": "storybook dev -p 6006",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "watch": "stencil build --watch"
+    "watch": "stencil build --dev --watch --serve",
+    "dev": "concurrently \"yarn:start\" \"yarn:storybook\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.8.0",
     "@fullhuman/postcss-purgecss": "^6.0.0",
@@ -77,6 +80,6 @@
     "typescript": "^5.5.4",
     "vite": "^5.4.2"
   },
-  "collection": "dist/collection/collection-manifest.json",
-  "collection:main": "dist/collection/index.js"
+  "collection": "static-files/collection/collection-manifest.json",
+  "collection:main": "static-files/collection/index.js"
 }

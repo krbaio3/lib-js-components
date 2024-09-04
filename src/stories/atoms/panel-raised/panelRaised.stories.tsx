@@ -1,11 +1,11 @@
-import { defineCustomElements } from '../../../../loader';
+// import { defineCustomElements } from '../../../../loader';
 
 export default {
   title: 'Design System/Atoms/Panel Raised',
   tags: ['autodocs'],
   loaders: [
     async () => {
-      defineCustomElements();
+      // defineCustomElements();
       return {};
     },
   ],

@@ -1,4 +1,4 @@
-import { defineCustomElements } from '../../../../loader';
+// import { defineCustomElements } from '../../../../loader';
 
 export default {
   title: 'Design System/Atoms/MyComponent',
@@ -9,7 +9,7 @@ export default {
   },
   loaders: [
     async () => {
-      await defineCustomElements();
+      // await defineCustomElements();
       return {};
     },
   ],
