@@ -1,5 +1,8 @@
 import { setCustomElements } from '@storybook/web-components';
 import customElements from '../custom-elements.json';
+import { defineCustomElements } from '../loader';
+
+defineCustomElements();
 
 setCustomElements(customElements);
 
@@ -14,7 +17,7 @@ const preview = {
     },
   },
 
-  tags: ['autodocs']
+  tags: ['autodocs'],
 };
 
 export default preview;

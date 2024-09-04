@@ -1,21 +1,23 @@
 import { defineCustomElements } from '../../../../loader';
 
+defineCustomElements();
+
 export default {
   title: 'Atoms/Bitmap',
   tags: ['autodocs'],
   argTypes: {
-    first: { control: 'text' },
-    last: { control: 'text' },
+    imgSrc: { control: 'text' },
+    imgAlt: { control: 'text' },
   },
-  loaders: [
-    async () => {
-      await defineCustomElements();
-      return {};
-    },
-  ],
+  // loaders: [
+  //   async () => {
+  //     await defineCustomElements();
+  //     return {};
+  //   },
+  // ],
 };
 
-const Template = ({ imgSrc, imgAlt }) => ` <css-bitmap img-src="${imgSrc}" img-alt="${imgAlt}"></css-bitmap>`;
+const Template = ({ imgSrc, imgAlt }) => `<css-bitmap img-src="${imgSrc}" img-alt="${imgAlt}"></css-bitmap>`;
 
 export const Default = Template.bind({});
 Default.args = {

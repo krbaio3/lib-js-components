@@ -6,36 +6,136 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface CssBitmap {
+        "imgAlt": string;
+        "imgSrc": string;
+        "style"?: { [key: string]: string };
+    }
+    interface CssButton {
+        "label": string;
+        "type": string;
+    }
+    interface CssCheckbox {
+        "checked": boolean;
+        "label": string;
+    }
+    interface CssComponent {
         "first": string;
         "last": string;
     }
+    interface CssInput {
+        "type": string;
+        "value": string;
+    }
+    interface CssPanelRaised {
+    }
+    interface CssTable {
+        "headers": string[];
+        "rows": string[][];
+    }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLCssBitmapElement extends Components.CssBitmap, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLCssBitmapElement: {
+        prototype: HTMLCssBitmapElement;
+        new (): HTMLCssBitmapElement;
+    };
+    interface HTMLCssButtonElement extends Components.CssButton, HTMLStencilElement {
+    }
+    var HTMLCssButtonElement: {
+        prototype: HTMLCssButtonElement;
+        new (): HTMLCssButtonElement;
+    };
+    interface HTMLCssCheckboxElement extends Components.CssCheckbox, HTMLStencilElement {
+    }
+    var HTMLCssCheckboxElement: {
+        prototype: HTMLCssCheckboxElement;
+        new (): HTMLCssCheckboxElement;
+    };
+    interface HTMLCssComponentElement extends Components.CssComponent, HTMLStencilElement {
+    }
+    var HTMLCssComponentElement: {
+        prototype: HTMLCssComponentElement;
+        new (): HTMLCssComponentElement;
+    };
+    interface HTMLCssInputElement extends Components.CssInput, HTMLStencilElement {
+    }
+    var HTMLCssInputElement: {
+        prototype: HTMLCssInputElement;
+        new (): HTMLCssInputElement;
+    };
+    interface HTMLCssPanelRaisedElement extends Components.CssPanelRaised, HTMLStencilElement {
+    }
+    var HTMLCssPanelRaisedElement: {
+        prototype: HTMLCssPanelRaisedElement;
+        new (): HTMLCssPanelRaisedElement;
+    };
+    interface HTMLCssTableElement extends Components.CssTable, HTMLStencilElement {
+    }
+    var HTMLCssTableElement: {
+        prototype: HTMLCssTableElement;
+        new (): HTMLCssTableElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "css-bitmap": HTMLCssBitmapElement;
+        "css-button": HTMLCssButtonElement;
+        "css-checkbox": HTMLCssCheckboxElement;
+        "css-component": HTMLCssComponentElement;
+        "css-input": HTMLCssInputElement;
+        "css-panel-raised": HTMLCssPanelRaisedElement;
+        "css-table": HTMLCssTableElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface CssBitmap {
+        "imgAlt"?: string;
+        "imgSrc"?: string;
+        "style"?: { [key: string]: string };
+    }
+    interface CssButton {
+        "label"?: string;
+        "type"?: string;
+    }
+    interface CssCheckbox {
+        "checked"?: boolean;
+        "label"?: string;
+    }
+    interface CssComponent {
         "first"?: string;
         "last"?: string;
     }
+    interface CssInput {
+        "type"?: string;
+        "value"?: string;
+    }
+    interface CssPanelRaised {
+    }
+    interface CssTable {
+        "headers"?: string[];
+        "rows"?: string[][];
+    }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "css-bitmap": CssBitmap;
+        "css-button": CssButton;
+        "css-checkbox": CssCheckbox;
+        "css-component": CssComponent;
+        "css-input": CssInput;
+        "css-panel-raised": CssPanelRaised;
+        "css-table": CssTable;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "css-bitmap": LocalJSX.CssBitmap & JSXBase.HTMLAttributes<HTMLCssBitmapElement>;
+            "css-button": LocalJSX.CssButton & JSXBase.HTMLAttributes<HTMLCssButtonElement>;
+            "css-checkbox": LocalJSX.CssCheckbox & JSXBase.HTMLAttributes<HTMLCssCheckboxElement>;
+            "css-component": LocalJSX.CssComponent & JSXBase.HTMLAttributes<HTMLCssComponentElement>;
+            "css-input": LocalJSX.CssInput & JSXBase.HTMLAttributes<HTMLCssInputElement>;
+            "css-panel-raised": LocalJSX.CssPanelRaised & JSXBase.HTMLAttributes<HTMLCssPanelRaisedElement>;
+            "css-table": LocalJSX.CssTable & JSXBase.HTMLAttributes<HTMLCssTableElement>;
         }
     }
 }

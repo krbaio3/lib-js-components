@@ -1,7 +1,7 @@
 import { defineCustomElements } from '../../../../loader';
 
 export default {
-  title: 'Atoms/Bitmap',
+  title: 'Atoms/MyComponent',
   tags: ['autodocs'],
   argTypes: {
     first: { control: 'text' },
